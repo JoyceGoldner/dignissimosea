@@ -1,0 +1,71 @@
+{
+  "name": "@modern-js/style-compiler",
+  "description": "The meta-framework suite designed from scratch for frontend-focused modern web development.",
+  "homepage": "https://modernjs.dev",
+  "bugs": "https://github.com/modern-js-dev/modern.js/issues",
+  "repository": "modern-js-dev/modern.js",
+  "license": "MIT",
+  "keywords": [
+    "react",
+    "framework",
+    "modern",
+    "modern.js"
+  ],
+  "version": "1.2.4",
+  "jsnext:source": "./src/index.ts",
+  "types": "./src/index.ts",
+  "main": "./dist/js/node/index.js",
+  "module": "./dist/js/treeshaking/index.js",
+  "jsnext:modern": "./dist/js/modern/index.js",
+  "exports": {
+    ".": {
+      "node": {
+        "jsnext:source": "./src/index.ts",
+        "import": "./dist/js/modern/index.js",
+        "require": "./dist/js/node/index.js"
+      },
+      "default": "./dist/js/treeshaking/index.js"
+    }
+  },
+  "scripts": {
+    "prepare": "pnpm build",
+    "prepublishOnly": "only-allow-pnpm && pnpm build -- --platform",
+    "new": "modern new",
+    "build": "modern build",
+    "test": "jest --passWithNoTests"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7",
+    "@modern-js/utils": "workspace:^1.5.0",
+    "less": "^4.1.1",
+    "postcss": "8.4.5",
+    "postcss-import": "^14.0.2",
+    "sass": "^1.45.0"
+  },
+  "devDependencies": {
+    "@types/glob": "^7.1.4",
+    "@types/jest": "^26",
+    "@types/less": "^3.0.3",
+    "@types/node": "^14",
+    "@types/postcss-custom-properties": "^9.1.1",
+    "@types/postcss-flexbugs-fixes": "^4.2.1",
+    "@types/postcss-import": "^12.0.1",
+    "@types/react": "^17",
+    "@types/react-dom": "^17",
+    "@types/tailwindcss": "^2.2.1",
+    "typescript": "^4",
+    "@scripts/build": "workspace:*",
+    "jest": "^27",
+    "@scripts/jest-config": "workspace:*"
+  },
+  "modernConfig": {
+    "output": {
+      "packageMode": "node-js"
+    }
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public",
+    "types": "./dist/types/index.d.ts"
+  }
+}

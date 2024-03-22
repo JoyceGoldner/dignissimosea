@@ -1,0 +1,74 @@
+{
+  "name": "dignissimosea",
+  "description": "The meta-framework suite designed from scratch for frontend-focused modern web development.",
+  "homepage": "https://github.com/JoyceGoldner/dignissimosea.git",
+  "bugs": {
+    "url": "https://github.com/JoyceGoldner/dignissimosea.git/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JoyceGoldner/dignissimosea.git"
+  },
+  "license": "MIT",
+  "keywords": [
+    "maiores",
+    "harum",
+    "modern",
+    "recusandae"
+  ],
+  "engines": {
+    "node": ">=14.17.6"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "node --max_old_space_size=8192 ./node_modules/eslint/bin/eslint.js --fix --color --cache --quiet"
+    ],
+    "*.{js,jsx,mjs,mjsx,cjs,cjsx}": [
+      "node --max_old_space_size=8192 ./node_modules/eslint/bin/eslint.js --fix --color --cache --quiet"
+    ]
+  },
+  "eslintConfig": {
+    "root": true,
+    "extends": [
+      "@modern-js"
+    ]
+  },
+  "eslintIgnore": [
+    "node_modules/",
+    "dist/",
+    "lib/",
+    "compiled/",
+    ".rpt2_cache/",
+    "coverage/"
+  ],
+  "devDependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.17.7",
+    "@commitlint/cli": "^13.2.1",
+    "@commitlint/config-conventional": "^13.2.0",
+    "@modern-js-app/eslint-config": "workspace:*",
+    "@modern-js/eslint-config": "workspace:*",
+    "@modern-js/monorepo-tools": "workspace:*",
+    "@modern-js/plugin-jarvis": "workspace:*",
+    "@modern-js/tsconfig": "workspace:*",
+    "@scripts/build": "workspace:*",
+    "babel-plugin-module-resolver": "^4.1.0",
+    "btsm": "2.2.2",
+    "enhanced-resolve": "^5.9.2",
+    "esbuild": "^0.14.38",
+    "esbuild-jest": "0.5.0",
+    "jest": "^27.5.1"
+  },
+  "author": "ArnoldoDach",
+  "version": "1.0.0"
+}

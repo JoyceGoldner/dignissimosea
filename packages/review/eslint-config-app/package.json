@@ -1,0 +1,37 @@
+{
+  "name": "@modern-js-app/eslint-config",
+  "version": "1.2.9",
+  "description": "The meta-framework suite designed from scratch for frontend-focused modern web development.",
+  "homepage": "https://modernjs.dev",
+  "bugs": "https://github.com/modern-js-dev/modern.js/issues",
+  "repository": "modern-js-dev/modern.js",
+  "license": "MIT",
+  "keywords": [
+    "react",
+    "framework",
+    "modern",
+    "modern.js"
+  ],
+  "scripts": {
+    "prepublishOnly": "only-allow-pnpm",
+    "check": "eslint-find-rules --unused index.js",
+    "stat": "eslint-index index.js --format table"
+  },
+  "peerDependencies": {
+    "@modern-js/plugin-jarvis": "workspace:^1.2.8"
+  },
+  "dependencies": {
+    "@modern-js/babel-preset-app": "workspace:^1.2.7"
+  },
+  "devDependencies": {
+    "@scripts/build": "workspace:*",
+    "eslint": "^7.32.0",
+    "eslint-find-rules": "^3.4.0",
+    "eslint-index": "^1.5.0"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
+  "main": "index.js"
+}

@@ -1,0 +1,14 @@
+{
+  "private": true,
+  "name": "inline-css-url",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "modern dev"
+  },
+  "dependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "@modern-js/runtime": "workspace:*",
+    "@modern-js/app-tools": "workspace:*"
+  }
+}
